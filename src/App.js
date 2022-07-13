@@ -1,33 +1,30 @@
-
-
-import './App.css';
+import "./App.css";
 // import About from './component/About';
-import Navbar from './component/Navbar';
-import TextForm from './component/TextForm';
-import React from 'react';
-import Alert from './component/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import TextForm from "./component/TextForm";
+import React from "react";
+import Alert from "./component/Alert";
+import { Navigate, Route, Routes } from 'react-router-dom'
+import Login from "./component/Login";
+import Register from "./component/Register";
 
-function App(){
+
+function App() {
   return (
-   <>
-   
-<Navbar title ="Snap"   Aboutext = "About"/>
-<Alert Alert ="You Are In Snap"/>
-<div className="container my-3">
-  
+    <>   
+      <Navbar title="Snap" Aboutext="About" />
+      <Alert Alert="You Are In Snap" />
+      <Routes>
+        <Route path='/' element={<TextForm/>}/>
+        <Route path='/login' element={<Login/>} />
+        <Route path='/Register' element={<Register/>} />
 
-<TextForm heading ="Enter the text to analyze"/>
-{/* <About/>  */}
-</div>
-   </>
+      </Routes>
+      {/* <div className="container my-3">
+        <TextForm heading="Enter the text to analyze" />
+      </div> */}
+    </>
   );
 }
-
 
 export default App;

@@ -17,7 +17,7 @@ export default function Text() {
         <br />
         <br />
         <br />
-        <button type="button" class="btn btn-outline-secondary"><b>Learn More</b></button>
+        <button type="button" className="btn btn-outline-secondary"><b>Learn More</b></button>
     </div>
   )
 }
